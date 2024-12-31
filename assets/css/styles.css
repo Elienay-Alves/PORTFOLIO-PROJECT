@@ -8,17 +8,17 @@
   /*
     Change favorite Color:
 
-    Defaut (Red): hsl(358, 80%, 49%)
+    Defaut (Orange): hsl(25, 100%, 50%)
     Purple: hsl(265, 80%, 49%) - Blue: hsl(220, 80%, 49%)
     Pink: hsl(330, 80%, 49%) - Green: hsl(162, 70%, 40%)
-    Orange: hsl(14, 80%, 49%)
+    Red: hsl(358, 80%, 49%)
 
     For more colors visit: https://htmlcolorcodes.com/
     -> Choose any color
     -> Copu the color mode (HSL)
   */
-  --hue: 358;
-  --firs-color: hsl(var(--hue), 80%, 49%);
+  --hue: 25;
+  --firs-color: hsl(var(--hue), 100%, 50%);
   --first-color-alt: hsl(var(--hue), 76%, 45%);
   --white-color: hsl(0, 0%, 98%);
   --black-color: hsl(0, 0%, 1%);
@@ -179,6 +179,47 @@ img {
 
 /* =================== HOME =================== */
 /*===== PERFIL =====*/
+.perfil {
+  position: relative;
+  background:var(--conic-gradient);
+  height: 415px;
+  border-radius: 2rem;
+  padding: 1rem;
+  display: grid;
+  overflow:hidden;
+}
+
+.perfil__img {
+  width: 250px;
+  position: absolute;
+  justify-self: center;
+  align-self: flex-end;
+}
+
+.perfil__data {
+  align-self: flex-end;
+  background-color: hsla(0, 0%, 1%, .1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  border: 2px solid hsla(0, 0%, 100%, .5)
+}
+
+.perfil__name {
+  font: var(--font-regular) var(--biggest-font-size) var(--second-font);
+  margin-bottom: 1rem;
+}
+
+.perfil__buttons {
+  display: grid;
+  column-gap: .5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.perfil__buttons .button {
+  padding: 0.75rem 0;
+}
 
 
 /*===== INFO =====*/
@@ -188,3 +229,39 @@ img {
 
 
 /*===== SKILLS =====*/
+
+
+/*============= BUTTON =============*/
+.button {
+  display: inline-flex;
+  justify-content: center;
+  background-color: var(--firs-color);
+  color: var(--white-color);
+  font-weight: var(--font-semibold);
+  padding: 1.25rem 2.5rem;
+  border-radius: 4rem;
+  transition: background-color .4s;
+}
+
+.button__black {
+  background-color: var(--black-color);
+}
+
+button:hover {
+  background-color: var(--first-color-alt);
+}
+
+
+/*============= PROJECTS =============*/
+
+
+/*============= SERVICES =============*/
+
+
+/*============= EXPERIENCE =============*/
+
+
+/*============= CONTACT =============*/
+
+
+/*============= FOOTER =============*/
